@@ -15,7 +15,8 @@ export class ApiInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     return next.handle(request.clone({
-      url: `${environment.API_URL}/${request.url}`
+      // url: `${environment.API_URL}/${request.url}`
+      url: `https://project-management-application-production.up.railway.app/${request.url}`
     }));
   }
 }
